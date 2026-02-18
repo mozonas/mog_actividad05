@@ -13,30 +13,18 @@
     </aside>
 
     <section class="listNews">
-        <p> aquí se mostrarán las noticias dadas de alta</p>
-
-        <ul>
-                <li>
-                    <h3>Noticia 1</h3>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p> 
-                        <img src="https://dummyimage.com/300" alt="Imagen de la noticia">   
-                    </div>
-                </li>
-                <li>
-                    <h3>Noticia 2</h3>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p> 
-                        <img src="https://dummyimage.com/300" alt="Imagen de la noticia">   
-                    </div>
-                </li>
-                <li>
-                    <h3>Noticia 3</h3>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p> 
-                        <img src="https://dummyimage.com/300" alt="Imagen de la noticia">   
-                    </div>
-                </li>
-        </ul>
+        
+        <h2> Listado dinámico de Noticias</h2>
+        @for( noticia of arrayNews; track noticia.fecha ){
+        <article>
+        
+        <h3>{{noticia.titulo}}</h3>
+         <p>{{noticia.fecha}}</p>   
+        <p>{{noticia.descripcion}}</p>
+        <figure>
+            <img [src]="noticia.imagen" [alt]="noticia.titulo">
+        </figure>
+        </article>
+    }
     </section>
 </main>
