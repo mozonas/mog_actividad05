@@ -1,19 +1,30 @@
-.wrappper{
-    display:flex;
-    flex-direction:row;
+.wrapper{
+    width:100%;
 }
-.form{
-    display:flex;
-    flex-direction:column;
-    width: 33%;
-    padding: 2em;
-    gap:1em;
+.form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 33%;
+  height: 100vh;
+  padding: 2em;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.listNews {
+  margin-left: 33%;
+  width: 67%;
+  padding: 2em;
+  box-sizing: border-box;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
-.listNews{
-    display:flex;
-    flex-direction:column;
-    width: 64%;
-    padding: 2em;
-    gap:1em;
+textarea.description{
+  min-height: 220px;
+  resize: vertical;
+  padding: 8px;
+  font-family: inherit;
 }

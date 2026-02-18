@@ -1,16 +1,16 @@
 <p>blog works!</p>
 
 <main class="wrapper">
-    <section class="form">
+    <aside class="form">
         <p> aquí introduciremos los inputs para dar de alta las noticias</p>
 
         <input type="text" name="title" id="title" placeholder="Título de la noticia" required>
-        <input type="text" name="description" id="description" placeholder="Descripción de la noticia" required>
+        <textarea class="description" name="description" id="description" placeholder="Descripción de la noticia" maxlength="2000" required></textarea>
         <input type="text" name="image" id="image" placeholder="URL de la imagen de la noticia" required>
         <input type="date" name="date" id="date" placeholder="Fecha de la noticia" required>
         <button>Agregar noticia</button>
 
-    </section>
+    </aside>
 
     <section class="listNews">
         <p> aquí se mostrarán las noticias dadas de alta</p>
