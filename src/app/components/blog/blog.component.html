@@ -4,11 +4,11 @@
     <aside class="form">
         <p> aquí introduciremos los inputs para dar de alta las noticias</p>
 
-        <input type="text" name="title" id="title" placeholder="Título de la noticia" required>
-        <textarea class="description" name="description" id="description" placeholder="Descripción de la noticia" maxlength="2000" required></textarea>
-        <input type="text" name="image" id="image" placeholder="URL de la imagen de la noticia" required>
-        <input type="date" name="date" id="date" placeholder="Fecha de la noticia" required>
-        <button>Agregar noticia</button>
+        <input type="text" name="title" id="title" placeholder="Título de la noticia" required [(ngModel)]="news.titulo">
+        <textarea class="description" name="description" id="description" placeholder="Descripción de la noticia" maxlength="2000" required [(ngModel)]="news.descripcion"></textarea>
+        <input type="text" name="image" id="image" placeholder="URL de la imagen de la noticia" required [(ngModel)]="news.imagen">
+        <input type="date" name="date" id="date" placeholder="Fecha de la noticia" required [(ngModel)]="news.fecha" [(ngModel)]="news.fecha">
+        <button (click)="guardarNoticia()">Agregar noticia</button>
 
     </aside>
 
