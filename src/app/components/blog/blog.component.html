@@ -16,14 +16,17 @@
         
         <h2> Listado dinámico de Noticias</h2>
         @for( noticia of arrayNews; track noticia.fecha ){
-        <article>
+        <article class="newWrapper">
         
-        <h3>{{noticia.titulo}}</h3>
-         <p>{{noticia.fecha}}</p>   
-        <p>{{noticia.descripcion}}</p>
-        <figure>
-            <img [src]="noticia.imagen" [alt]="noticia.titulo">
-        </figure>
+        <h3 class="mainTitle">{{noticia.titulo}}</h3>
+         <p class="dateNew">{{noticia.fecha}}</p>  
+         <div class="mainContentNew">
+            <p>{{noticia.descripcion}}</p>
+            <figure>
+                <img [src]="noticia.imagen" [alt]="noticia.titulo">
+            </figure>
+            </div> 
+
         </article>
     }
     </section>

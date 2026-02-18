@@ -3,7 +3,7 @@
 }
 .form {
   position: fixed;
-  top: 0;
+  top: 3em;
   left: 0;
   width: 33%;
   height: 100vh;
@@ -28,6 +28,31 @@ textarea.description{
   padding: 8px;
   font-family: inherit;
 }
+
+.mainTitle {
+  background-color: rgb(44, 35, 35);
+  color: white;
+  padding: 1em;
+  border-radius: 20px;
+}
+.newWrapper {
+  margin-bottom: 2em;
+  padding: 2em;
+  border: 1px solid #686161;
+  border-radius: 10px;
+}
+
+.mainContentNew {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.dateNew {
+  font-size: 0.9em;
+  font-style: italic;
+  color: #555;
+
+}
 /* mediaquery para mobile: mantener el flujo normal (no fixed/absolute) */
 @media (max-width: 768px) {
   .wrapper{
@@ -49,11 +74,25 @@ textarea.description{
   .listNews {
     margin-left: 0;
     width: 100%;
-    padding: 2em;
+    padding: 1em;
     box-sizing: border-box;
+    
   }
   textarea.description{
   min-height: 100px;
+  }
+  .mainContentNew {
+    display: block
 
-}
+  }
+  .newWrapper{
+    justify-content: center;
+    align-items: center;
+    img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    }
+  }
 }
