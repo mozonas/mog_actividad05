@@ -28,3 +28,32 @@ textarea.description{
   padding: 8px;
   font-family: inherit;
 }
+/* mediaquery para mobile: mantener el flujo normal (no fixed/absolute) */
+@media (max-width: 768px) {
+  .wrapper{
+    display: block;
+    padding-top: 4rem; /* espacio para header fijo */
+    padding-bottom: 4rem; /* espacio para footer fijo */
+  }
+
+  .form {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 50%;
+    padding: 2em;
+    box-sizing: border-box;
+  }
+
+  .listNews {
+    margin-left: 0;
+    width: 100%;
+    padding: 2em;
+    box-sizing: border-box;
+  }
+  textarea.description{
+  min-height: 100px;
+
+}
+}
