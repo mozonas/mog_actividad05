@@ -47,12 +47,25 @@ textarea.description{
   flex-direction: row;
   gap: 1em;
 }
-.dateNew {
-  font-size: 0.9em;
-  font-style: italic;
-  color: #555;
+.contentNew {
+  width: 64%;
 
+  justify-content: space-between;
 }
+figure {
+  width: 36%;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.imageNew {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 /* mediaquery para mobile: mantener el flujo normal (no fixed/absolute) */
 @media (max-width: 768px) {
   .wrapper{
@@ -82,17 +95,27 @@ textarea.description{
   min-height: 100px;
   }
   .mainContentNew {
-    display: block
-
+    display: block;
   }
-  .newWrapper{
-    justify-content: center;
-    align-items: center;
-    img {
-    max-width: 100%;
+
+  .contentNew {
+    width: 100%;
+  }
+
+  figure {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .imageNew {
+    width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
-    }
+  }
+
+  .newWrapper {
+    justify-content: center;
+    align-items: center;
   }
 }

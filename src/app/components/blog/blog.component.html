@@ -21,9 +21,9 @@
         <h3 class="mainTitle">{{noticia.titulo}}</h3>
          <p class="dateNew">{{noticia.fecha}}</p>  
          <div class="mainContentNew">
-            <p>{{noticia.descripcion}}</p>
+            <p class="contentNew">{{noticia.descripcion}}</p>
             <figure>
-                <img [src]="noticia.imagen" [alt]="noticia.titulo">
+                <img class="imageNew" [src]="noticia.imagen ? noticia.imagen : imageUnfound" [alt]="noticia.titulo">
             </figure>
             </div> 
 
